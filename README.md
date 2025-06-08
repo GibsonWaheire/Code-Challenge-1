@@ -20,11 +20,39 @@ A simple calculator to estimate ingredients needed to make a given number of cup
   - `chai.js`: Logic for calculating ingredient quantities.
 
 - **Sample Output**:
+ User input: 3
+Output:
+To make 3 cups of Kenyan Chai, you will need:
+Water: 600 ml
+Milk: 150 ml
+Tea Leaves (Majani): 3 tablespoons
+Sugar (Sukari): 6 teaspoons
 
+Enjoy your Chai Bora!
 
 ---
 
-### 2. mobileMoneyEstimator
+### 🛵 2. Boda Boda Fare Estimator (`bodaFareCalculator`)
+
+Estimates the total fare for a boda boda ride based on a fixed base fare and a per-kilometer charge.
+
+**Fare Structure**:
+- Base Fare: KES 50
+- Per Kilometer: KES 15/km
+
+**Example**:
+
+---
+User input: 5
+Output:
+Uko kwote? Io ni 5 km:
+Ukikalia Pikipiki: KES 50
+Mpaka Uko: KES 75
+Total: KES 125
+
+Panda Pikipiki!
+
+### 3. mobileMoneyEstimator
 A mini-tool to calculate the estimated transaction fee for sending money via mobile.
 
 - **Fee Structure**:
@@ -45,6 +73,13 @@ A mini-tool to calculate the estimated transaction fee for sending money via mob
  
 
 ---
+ User input: 10000
+Output:
+Sending KES 10000:
+Calculated Transaction Fee: KES 70
+Total amount to be debited: KES 10070
+
+Send Money Securely!
 
 ## 💻 How to Use
 
@@ -54,15 +89,14 @@ A mini-tool to calculate the estimated transaction fee for sending money via mob
  cd Code-Challenge-1
 
 Code-Challenge-1/
-│
 ├── chaiCalculator/
-│   ├── index.html
 │   └── chai.js
-│
+├── bodaFareCalculator/
+│   └── fare.js
 ├── mobileMoneyEstimator/
 │   └── fee.js
-│
 └── README.md
+
 
 ✅ Author
 Gibson Waheire

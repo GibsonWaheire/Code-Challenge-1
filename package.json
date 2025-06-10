@@ -1,0 +1,23 @@
+{
+  "name": "code-challenge-1",
+  "version": "1.0.0",
+  "description": "This repository contains simple JavaScript-based projects designed to strengthen fundamental programming skills. Each project is organized in its own folder and solves a practical, real-world problem using basic JavaScript logic, input handling, and output display.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GibsonWaheire/Code-Challenge-1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GibsonWaheire/Code-Challenge-1/issues"
+  },
+  "homepage": "https://github.com/GibsonWaheire/Code-Challenge-1#readme",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
+}

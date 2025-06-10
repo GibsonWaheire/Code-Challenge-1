@@ -1,36 +1,36 @@
 
-function estimateTransactionFee() {
-    const input = prompt("Unatuma Ngapi? (KES):");
-    const amountToSend = Number(input);
-  
+const prompt = require('prompt-sync')();
 
-    if (isNaN(amountToSend) || amountToSend <= 0) {
-      console.log("Please enter a valid positive amount.");
-      return; 
+function estimateTransactionFee(amountToSend) {
+    // Fee is 1.5% of the amount
+    let fee = amountToSend * 0.015;
+
+    // Apply fee rules (min 10, max 70)
+    if (fee < 10) {
+        fee = 10;
+    } else if (fee > 70) {
+        fee = 70;
     }
 
-    const FEE_PERCENTAGE = 0.015; // 1.5%
-    const MIN_FEE = 10;           // kes 15
-    const MAX_FEE = 70;           // Kes 70
-  
-    
-
-    let fee = amountToSend * FEE_PERCENTAGE;
-  
-    
-    if (fee < MIN_FEE) {
-      fee = MIN_FEE;
-    } else if (fee > MAX_FEE) {
-      fee = MAX_FEE;
-    }
-  
+    // Total amount debited = original amount + fee
     const totalDebited = amountToSend + fee;
-  
-    
-    console.log(`Sending KES ${amountToSend}:`);
+
+    // Output the results
+    console.log(`\nSending KES ${amountToSend}:`);
     console.log(`Calculated Transaction Fee: KES ${fee}`);
     console.log(`Total amount to be debited: KES ${totalDebited}`);
-    console.log(`\nSend Money Securely!`); // termplate literal. an espace sequence
-  }
-  
+    console.log("Send Money Securely!");
+}
+
+// Ask user for the amount to send
+const input = prompt("Unatuma Ngapi? (KES): ");
+const amount = Number(input);
+
+// Validate input
+if (!isNaN(amount) && amount > 0) {
+    estimateTransactionFee(amount);
+} else {
+    console.log("Tafadhali ingiza kiasi sahihi cha kutuma.");
+}
+
   
